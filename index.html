@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIG Bacefook Newsfeed</title>
+    <script type="module" src="dataGenerator.js"></script>
+    <script type="module" src="app.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Bacefook Newsfeed</h1>
+      <div class="userProfile">
+        <i class="fa-solid fa-user fa-3x"></i>
+        <div id="usernameDisplay"></div>
+      </div>
+    </header>
+    <!-- <container> -->
+      <aside>
+        <ul>
+          <li><i class="fa-solid fa-house"></i>ホーム</li>
+          <li><i class="fa-solid fa-magnifying-glass"></i>検索</li>
+          <li><i class="fa-regular fa-square-plus"></i>作成</li>
+        </ul>
+      </aside>
+      <main>
+        <button id="toggleFormButton">投稿する</button>
+        <div id="postFormContainer" style="display: none;">
+          <form id="postForm">
+              <label for="postText">投稿内容:</label><br>
+              <textarea id="postText" name="postText" rows="4" cols="50"></textarea><br>
+              
+              <label><input type="radio" name="feering" class="feelingRadio" value="😀 happy">😀</label>
+              <label><input type="radio" name="feering" class="feelingRadio" value="😪 tired">😪</label>
+              <label><input type="radio" name="feering" class="feelingRadio" value="😡 angry">😡</label>
+              <label><input type="radio" name="feering" class="feelingRadio" value="😱 scared">😱</label>
+              <label><input type="radio" name="feering" class="feelingRadio" value="🥳 excited">🥳</label>
+              <button type="submit">投稿する</button>
+          </form>
+      </div>
+        <div id="newsfeed"></div>
+
+      </main>
+    <!-- </container> -->
+    <footer>
+      <p class="createrInfo">ウメナオ・テックウィザーズ</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: auto;
+}
+
+#newsfeed {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.friend {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeStamp {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.feeling {
+    margin-bottom: 10px;
+}
+
+.postImage {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.friend .timeStamp .feeling {
+    display: block;
+}
+
+#postFormContainer {
+    margin-top: 20px;
+}
+
+#postForm {
+    margin-bottom: 10px;
+}
+
+#postForm textarea {
+    width: 100%;
+    resize: vertical; /* 縦方向のみリサイズ可能にする */
+}
+
+
+.userProfile {
+    flex: initial;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    position: fixed;
+    background-color: #89c7de;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+footer {
+    width: 100%;
+    background-color: #89c7de;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.createrInfo {
+    text-align: end;
+    padding-right: 15px;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    float: right;
+    padding-left: 20%;
+    padding-top: 80px;
+}
+
+
+aside {
+    width: 20%;
+    background-color: aliceblue;
+    position: fixed; 
+    top: 80px; /* ヘッダーの高さ分下げる */
+    bottom: 0; /* フッターまで広げる */
+    overflow-y: auto; /* サイドバーがコンテンツに収まらない場合にスクロールさせる */
+    float: left;
+}
+
+/* container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+} */
+
+/* input:checked {
+    background-color: #777;
+} */
+
+.feelingRadio:checked + label {
+    background-color: yellow; /* 選択したラベルの背景色を変更 */
+}

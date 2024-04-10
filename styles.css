@@ -32,6 +32,8 @@ h1 {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  float: left;
+  margin: 5px;
 }
 
 .friend .timeStamp .feeling {
@@ -84,6 +86,7 @@ footer {
 .createrInfo {
     text-align: end;
     padding-right: 15px;
+    margin: 0;
 }
 
 main {
@@ -144,7 +147,22 @@ aside {
   background-color: mintcream;
 }
 
-.postImage {
-  float: left;
-  margin: 5px;
+@keyframes infinity-scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+    to {
+    transform: translateX(100%);
+  }
 }
+.scroll-infinity__wrap {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+}
+.scroll-infinity__list--right {
+  animation: infinity-scroll-right 2s infinite linear 1s both;
+}
+

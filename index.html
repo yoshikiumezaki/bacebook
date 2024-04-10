@@ -4,6 +4,7 @@
     <title>DIG Bacefook Newsfeed</title>
     <script type="module" src="dataGenerator.js"></script>
     <script type="module" src="app.js"></script>
+    <script src="test.js"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
@@ -16,33 +17,44 @@
         <div id="usernameDisplay"></div>
       </div>
     </header>
-    <!-- <container> -->
       <aside>
         <ul>
           <li><i class="fa-solid fa-house"></i>ホーム</li>
           <li><i class="fa-solid fa-magnifying-glass"></i>検索</li>
-          <li><i class="fa-regular fa-square-plus"></i>作成</li>
+          <li id="createView"><i class="fa-regular fa-square-plus"></i>作成</li>
         </ul>
       </aside>
       <main>
-        <button id="toggleFormButton">投稿する</button>
-        <div id="postFormContainer" style="display: none;">
-          <form id="postForm">
-              <label for="postText">投稿内容:</label><br>
-              <textarea id="postText" name="postText" rows="4" cols="50"></textarea><br>
-              
-              <label><input type="radio" name="feering" class="feelingRadio" value="😀 happy">😀</label>
-              <label><input type="radio" name="feering" class="feelingRadio" value="😪 tired">😪</label>
-              <label><input type="radio" name="feering" class="feelingRadio" value="😡 angry">😡</label>
-              <label><input type="radio" name="feering" class="feelingRadio" value="😱 scared">😱</label>
-              <label><input type="radio" name="feering" class="feelingRadio" value="🥳 excited">🥳</label>
-              <button type="submit">投稿する</button>
-          </form>
-      </div>
         <div id="newsfeed"></div>
 
+        <div class="overlay" id="overlay"></div>
+        <div class="popup-container" id="popupPostForm">
+          <h2>投稿フォーム</h2>
+          <form id="postForm" enctype="multipart/form-data">
+            <label for="postText">コメント:</label><br>
+            <textarea id="postText" name="postText" rows="4" cols="50"></textarea><br>
+            <label for="distance">走った距離 (km):</label>
+            <input type="text" id="distance" name="distance"><br>
+            <label for="time">走った時間 (分):</label>
+            <input type="text" id="time" name="time"><br>
+            <label for="destination">目的地:</label>
+            <input type="text" id="destination" name="destination"><br>
+            <label for="postImage">画像を選択:</label>
+            <input type="file" id="postImage" name="postImage"><br>
+            <label for="feeling">Feeling:</label>
+            <label><input type="radio" name="feeling" class="feelingRadio" value="😀 happy">😀</label>
+            <label><input type="radio" name="feeling" class="feelingRadio" value="😪 tired">😪</label>
+            <label><input type="radio" name="feeling" class="feelingRadio" value="😡 angry">😡</label>
+            <label><input type="radio" name="feeling" class="feelingRadio" value="😱 scared">😱</label>
+            <label><input type="radio" name="feeling" class="feelingRadio" value="🥳 excited">🥳</label>
+            <button type="submit">投稿する</button>
+          </form>
+          
+          <button id="closePopupButton">閉じる</button>
+        </div>
+
+
       </main>
-    <!-- </container> -->
     <footer>
       <p class="createrInfo">ウメナオ・テックウィザーズ</p>
     </footer>

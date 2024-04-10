@@ -165,4 +165,6 @@ aside {
 .scroll-infinity__list--right {
   animation: infinity-scroll-right 2s infinite linear 1s both;
 }
-
+section {
+    height: 50px;
+}

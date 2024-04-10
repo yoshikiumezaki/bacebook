@@ -152,7 +152,7 @@ aside {
     transform: translateX(-100%);
   }
     to {
-    transform: translateX(100%);
+    transform: translateX(5000%);
   }
 }
 .scroll-infinity__wrap {
@@ -163,8 +163,9 @@ aside {
   padding: 0;
 }
 .scroll-infinity__list--right {
-  animation: infinity-scroll-right 2s infinite linear 1s both;
+  animation: infinity-scroll-right 5s infinite linear 1s both;
 }
-section {
-    height: 50px;
+.scroll-infinity_item {
+    height: 30px;
+    padding: 0;
 }

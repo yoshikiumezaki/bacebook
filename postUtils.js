@@ -9,11 +9,18 @@ export function appendPostToContainer(post, containerEl) {
   
     const timeEl = document.createElement('div');
     timeEl.className = 'timeStamp';
-    const now = moment();
+    const now = moment().local();;
     const postTime = moment(post.timestamp);
-    const elapsedTimeMinutes = now.diff(postTime, 'minutes');
-    timeEl.innerText = `投稿してから${elapsedTimeMinutes}分経過しました`;
+    timeEl.innerText = postTime.local().format("YYYY年MM月DD日");
     postEl.append(timeEl);
+    
+    const deffTimeEl = document.createElement('div');
+    deffTimeEl.className = 'timeStamp';
+    const now_deff = moment();
+    const postTime_deff = moment(post.timestamp);
+    const elapsedTimeMinutes = now_deff.diff(postTime_deff, 'minutes');
+    deffTimeEl.innerText = `投稿してから${elapsedTimeMinutes}分経過しました`;
+    postEl.append(deffTimeEl);
   
     const feelingEl = document.createElement('div');
     feelingEl.className = 'feeling';
@@ -26,6 +33,24 @@ export function appendPostToContainer(post, containerEl) {
     postEl.append(imageEl);
     imageEl.width = 100;
     imageEl.height = 100;
+
+    const distanceEl = document.createElement('div');
+    const distanceOutput = `走った距離 : ${post.distance} km`;
+    distanceEl.className = 'distance';
+    distanceEl.innerText = distanceOutput;
+    postEl.append(distanceEl);
+
+    const runTimeEl = document.createElement('div');
+    const runTimeOutput = `走った時間 : ${post.time} km`;
+    runTimeEl.className = 'runTime';
+    runTimeEl.innerText = runTimeOutput;
+    postEl.append(runTimeEl);
+
+    const destinationEl = document.createElement('div');
+    const destinationOutput = `目的地 : ${post.destination}`;
+    destinationEl.className = 'destination';
+    destinationEl.innerText = destinationOutput;
+    postEl.append(destinationEl);
   
     containerEl.after(postEl);
   }

@@ -5,7 +5,7 @@ export function appendPostToContainer(post, containerEl) {
     const imageEl = document.createElement('img');
     imageEl.className = 'postImage';
     imageEl.src = post.image;
-    postEl.append(imageEl);
+    //postEl.append(imageEl);
     imageEl.width = 100;
     imageEl.height = 100;
     cardEl.append(imageEl);

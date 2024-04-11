@@ -7,6 +7,20 @@ window.addEventListener('load', () => {
     localStorage.setItem('username', username);
   }
 
+  // ローカルからユーザーイメージを取得
+  const userImageKey = `${username}ImageKey`
+  const imageData = localStorage.getItem(userImageKey);
+  if (imageData) {
+    const img = document.createElement('img');
+    img.id = "loginUserImage";
+    img.style.height = '100%';
+    img.style.width = '100%';
+    img.src = imageData;
+    img.alt = "user画像";
+    const userProfileElement = document.querySelector('.userProfile');
+    userProfileElement.insertBefore(img, userProfileElement.firstChild);
+  }
+
   const containerEl = document.querySelector('#newsfeed');
 
   // ローカルストレージから保存された投稿データを取得

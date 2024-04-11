@@ -38,8 +38,6 @@ h1 {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  float: right;
-  margin: 5px;
 }
 
 .friend .timeStamp .feeling {
@@ -55,18 +53,18 @@ h1 {
 }
 
 #postForm textarea {
-    width: 100%;
     resize: vertical; /* 縦方向のみリサイズ可能にする */
 }
 
-
 .userProfile {
     flex: initial;
+    position: relative;
 }
 
 li {
     list-style-type: none;
     padding: 10px;
+    cursor: pointer;
 }
 
 header {
@@ -83,7 +81,7 @@ footer {
     width: 100%;
     background-color: #89c7de;
     color: #fff;
-
+    text-align: center;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -105,11 +103,10 @@ main {
     padding-top: 80px;
 }
 
-
 aside {
     width: 20%;
     background-color: aliceblue;
-    position: fixed; 
+    position: fixed;
     top: 80px; /* ヘッダーの高さ分下げる */
     bottom: 0; /* フッターまで広げる */
     overflow-y: auto; /* サイドバーがコンテンツに収まらない場合にスクロールさせる */
@@ -129,9 +126,9 @@ aside {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-  }
+}
 
-  .popup-container {
+.popup-container {
     display: none;
     position: fixed;
     top: 50%;
@@ -139,16 +136,61 @@ aside {
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* ボーダーの角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影の効果を追加 */
     z-index: 1001;
-  }
+}
+
+.popup-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup-container form {
+  max-width: 400px; /* フォームの最大幅を設定 */
+  margin: 20px auto; /* 上下のマージンを追加して中央寄せ */
+}
+
+.popup-container label {
+  margin-bottom: 10px;
+}
+
+.popup-container input[type="text"],
+.popup-container input[type="file"],
+.popup-container textarea {
+  width: calc(100% - 20px); /* マージンを考慮して調整 */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.popup-container button[type="submit"],
+.popup-container button#closePopupButton {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: #89c7de;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup-container button#closePopupButton {
+    background-color: #ccc;
+}
+
+.popup-container button[type="submit"]:hover,
+.popup-container button#closePopupButton:hover {
+  background-color: #77b5d8;
+}
 
 .postCard {
   padding: 20px;
   margin: 5px;
   width: 300px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 25% 10%;
   background-color: mintcream;
 }
@@ -163,10 +205,25 @@ aside {
 }
 .scroll-infinity__wrap {
   width: 100%;
-  background-color: white;
-  display: flex;
-  overflow: hidden;
-  padding: 0;
+  height: 600px;
+  padding-right: 200px;
+  /* padding: 10px; */
+}
+
+#runnerUme {
+  position: fixed;
+  top: 530px;
+  left: 100px;
+  width: 70px;
+  height: 70px;
+}
+
+#runnerNao {
+  position: fixed;
+  top: 530px;
+  left: 100px;
+  width: 70px;
+  height: 70px;
 }
 .scroll-infinity__list--right_men1 {
   animation: infinity-scroll-right 6s infinite linear 1s both;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run活</title>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="./home.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+        <h1>Home</h1>
+        <div class="userProfile">
+          
+          <div id="usernameDisplay"></div>
+        </div>
+    </header>
+    
+    <div class="japanMapArea">
+        <table id="friendData">
+            <thead>
+                <tr>
+                    <th>友達</th>
+                    <th>走行距離 (km)</th>
+                    <th>走行時間 (分)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ここに友達別のデータが追加されます -->
+            </tbody>
+        </table>
+        <p><img id="umi" src="images/umi.jpg" alt="海"></p>
+        <p><img id="startPoint" src="images/startPoint.png" alt="スタート地点"></p>
+        <p><img id="runnerUme" src="images/mens.gif" alt="走る人"></p>
+        <p><img id="runnerNao" src="images/rabbit.gif" alt="走る人"></p>
+        <button id="navToIndexButton">本日の記録を追加</button>
+
+    </div> 
+</body>
+</html>

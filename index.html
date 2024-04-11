@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DIG Bacefook Newsfeed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run活</title>
     <script type="module" src="dataGenerator.js"></script>
     <script type="module" src="app.js"></script>
-    <script src="test.js"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <div class="logoImage">
-        <img src="images/IMG_0668.png" class="logo"><img src="images/240411_logo_bacefook.png" class="logo">
-      </div>
       <h1>Bacefook Newsfeed</h1>
       <div class="userProfile">
-        <i class="fa-solid fa-user fa-3x"></i>
+        <!-- <i class="fa-solid fa-user fa-3x"></i> -->
         <div id="usernameDisplay"></div>
       </div>
     </header>
       <aside>
         <ul>
-          <li><i class="fa-solid fa-house"></i>ホーム</li>
+          <li onclick="window.location.href = 'home.html'"><i class="fa-solid fa-house"></i>ホーム</li>
           <li><i class="fa-solid fa-magnifying-glass"></i>検索</li>
           <li id="createView"><i class="fa-regular fa-square-plus"></i>作成</li>
         </ul>
@@ -34,14 +32,14 @@
         <div class="popup-container" id="popupPostForm">
           <h2>投稿フォーム</h2>
           <form id="postForm" enctype="multipart/form-data">
-            <label for="postText">コメント:</label><br>
-            <textarea id="postText" name="postText" rows="4" cols="50"></textarea><br>
             <label for="distance">走った距離 (km):</label>
             <input type="text" id="distance" name="distance"><br>
             <label for="time">走った時間 (分):</label>
             <input type="text" id="time" name="time"><br>
             <label for="destination">目的地:</label>
             <input type="text" id="destination" name="destination"><br>
+            <label for="postText">コメント:</label><br>
+            <textarea id="postText" name="postText" rows="4" cols="50"></textarea><br>
             <label for="postImage">画像を選択:</label>
             <input type="file" id="postImage" name="postImage"><br>
             <label for="feeling">Feeling:</label>

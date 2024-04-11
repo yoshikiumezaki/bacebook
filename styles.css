@@ -1,73 +1,68 @@
 body {
     font-family: Arial, sans-serif;
-}
-.logoImage {
-    padding-left: 10px;
-}
-.logo {
-    height: 75px;
-}
+  }
+  
 
-h1 {
+  h1 {
     text-align: center;
     margin-bottom: 20px;
     flex: auto;
-}
-
-#newsfeed {
+  }
+  
+  #newsfeed {
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-.friend {
+  }
+  
+  .friend {
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-.timeStamp {
+  }
+  
+  .timeStamp {
     font-size: 12px;
     color: #777;
     margin-bottom: 5px;
-}
-
-.feeling {
+  }
+  
+  .feeling {
     margin-bottom: 10px;
-}
-
-.postImage {
+  }
+  
+  .postImage {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.friend .timeStamp .feeling {
+  }
+  
+  .friend .timeStamp .feeling {
     display: block;
-}
-
-#postFormContainer {
+  }
+  
+  #postFormContainer {
     margin-top: 20px;
-}
-
-#postForm {
+  }
+  
+  #postForm {
     margin-bottom: 10px;
-}
-
-#postForm textarea {
+  }
+  
+  #postForm textarea {
     resize: vertical; /* 縦方向のみリサイズ可能にする */
-}
-
-.userProfile {
+  }
+  
+  .userProfile {
     flex: initial;
     position: relative;
-}
-
-li {
+  }
+  
+  li {
     list-style-type: none;
     padding: 10px;
     cursor: pointer;
-}
-
-header {
+  }
+  
+  header {
     position: fixed;
     background-color: #89c7de;
     top: 0;
@@ -75,9 +70,9 @@ header {
     width: 100%;
     height: 80px;
     display: flex;
-}
-
-footer {
+  }
+  
+  footer {
     width: 100%;
     background-color: #89c7de;
     color: #fff;
@@ -85,15 +80,14 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-}
-
-.createrInfo {
+  }
+  
+  .createrInfo {
     text-align: end;
     padding-right: 15px;
-    margin: 0;
-}
-
-main {
+  }
+  
+  main {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -101,9 +95,9 @@ main {
     float: right;
     padding-left: 20%;
     padding-top: 80px;
-}
-
-aside {
+  }
+  
+  aside {
     width: 20%;
     background-color: aliceblue;
     position: fixed;
@@ -111,13 +105,13 @@ aside {
     bottom: 0; /* フッターまで広げる */
     overflow-y: auto; /* サイドバーがコンテンツに収まらない場合にスクロールさせる */
     float: left;
-}
-
-.feelingRadio:checked + label {
+  }
+  
+  .feelingRadio:checked + label {
     background-color: yellow; /* 選択したラベルの背景色を変更 */
-}
-
-.overlay {
+  }
+  
+  .overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -126,9 +120,9 @@ aside {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-}
-
-.popup-container {
+  }
+  
+  .popup-container {
     display: none;
     position: fixed;
     top: 50%;
@@ -139,102 +133,180 @@ aside {
     border-radius: 10px; /* ボーダーの角を丸くする */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影の効果を追加 */
     z-index: 1001;
-}
-
-.popup-container h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.popup-container form {
-  max-width: 400px; /* フォームの最大幅を設定 */
-  margin: 20px auto; /* 上下のマージンを追加して中央寄せ */
-}
-
-.popup-container label {
-  margin-bottom: 10px;
-}
-
-.popup-container input[type="text"],
-.popup-container input[type="file"],
-.popup-container textarea {
-  width: calc(100% - 20px); /* マージンを考慮して調整 */
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-.popup-container button[type="submit"],
-.popup-container button#closePopupButton {
-  width: 100%;
-  padding: 10px 20px;
-  border: none;
-  background-color: #89c7de;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.popup-container button#closePopupButton {
+  }
+  
+  .popup-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .popup-container form {
+    max-width: 400px; /* フォームの最大幅を設定 */
+    margin: 20px auto; /* 上下のマージンを追加して中央寄せ */
+  }
+  
+  .popup-container label {
+    margin-bottom: 10px;
+  }
+  
+  .popup-container input[type="text"],
+  .popup-container input[type="file"],
+  .popup-container textarea {
+    width: calc(100% - 20px); /* マージンを考慮して調整 */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .popup-container button[type="submit"],
+  .popup-container button#closePopupButton {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #89c7de;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .popup-container button#closePopupButton {
     background-color: #ccc;
-}
-
-.popup-container button[type="submit"]:hover,
-.popup-container button#closePopupButton:hover {
-  background-color: #77b5d8;
-}
-
-.postCard {
-  padding: 20px;
-  margin: 5px;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 25% 10%;
-  background-color: mintcream;
-}
-
-@keyframes infinity-scroll-right {
-  from {
-    transform: translateX(-100%);
   }
-    to {
-    transform: translateX(7000%);
+  
+  .popup-container button[type="submit"]:hover,
+  .popup-container button#closePopupButton:hover {
+    background-color: #77b5d8;
   }
-}
-.scroll-infinity__wrap {
-  width: 100%;
-  height: 600px;
-  padding-right: 200px;
-  /* padding: 10px; */
-}
+  
+  .postCard {
+    padding: 20px;
+    margin: 5px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 25% 10%;
+    background-color: mintcream;
+  }
+  
+  .postImage {
+    float: left;
+    margin: 5px;
+  }
+  
+  .japanMapArea {
+    position: fixed;
+    top: 75px;
+    width: 100%; /* 親要素いっぱいに広げる */
+    height: 500px;
+  }
+  
+  #umi {
+    width: 100%;
+    height: 600px;
+    padding-right: 200px;
+    /* padding: 10px; */
+  }
+  
+  #runnerUme {
+    position: fixed;
+    top: 530px;
+    left: 100px;
+    width: 70px;
+    height: 70px;
+  }
+  
+  #runnerNao {
+    position: fixed;
+    top: 530px;
+    left: 100px;
+    width: 70px;
+    height: 70px;
+  }
+  
+  #startPoint {
+    position: relative;
+    top: -220px;
+    left: 110px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  table {
+    position: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 500px;
+  }
+  
+  table tr {
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+  }
+  
+  table tr:hover {
+    background-color: #d4f0fd;
+  }
+  
+  table th,
+  table td {
+    text-align: center;
+    width: 25%;
+    padding: 15px 0;
+  }
+  
+  table td.icon {
+    background-size: 35px;
+    background-position: left 5px center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+  }
+  
+  table td.icon.bird {
+    background-image: url(icon-bird.png)
+  }
+  
+  table td.icon.whale {
+    background-image: url(icon-whale.png)
+  }
+  
+  table td.icon.crab {
+    background-image: url(icon-crab.png)
+  }
+  
+  a.btn--red.btn--cubic {
+    border-bottom: 5px solid #9f000c;
+  }
+  
+  a.btn--red.btn--cubic:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid #9f000c;
+  }
+  
+  a.btn--radius {
+    border-radius: 100vh;
+  }
+  
+  .fa-position-right {
+    position: absolute;
+    top: calc(50% - .5em);
+    right: 1rem;
+  }
+  
+  #navToIndexButton {
+    position: fixed;
+    width: 400px;
+    height: 100px;
+    top: calc(100% - 150px);
+    left: calc(100% / 2 - 200px);
+  }
 
-#runnerUme {
-  position: fixed;
-  top: 530px;
-  left: 100px;
-  width: 70px;
-  height: 70px;
-}
-
-#runnerNao {
-  position: fixed;
-  top: 530px;
-  left: 100px;
-  width: 70px;
-  height: 70px;
-}
-.scroll-infinity__list--right_men1 {
-  animation: infinity-scroll-right 6s infinite linear 1s both;
-}
-.scroll-infinity__list--right_men2 {
-  animation: infinity-scroll-right 11s infinite linear 1s both;
-}
-.scroll-infinity__list--right_rabbit {
-  animation: infinity-scroll-right 10s infinite linear 1s both;
-}
-.scroll-infinity_item {
-    height: 30px;
-    padding: 0;
-}
+  #usernameDisplay {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+    vertical-align: bottom;
+  }

@@ -1,12 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-  }
+    background-image: url(images/aozora0729IMGL8742.jpg);
+    background-size: 100%;
+    background-attachment:fixed;
+}
   
+  .logoImage {
+    padding-left: 10px;
+}
+.logo {
+    height: 75px;
+}
 
-  h1 {
+.windowTitle {
     text-align: center;
     margin-bottom: 20px;
-    flex: auto;
+    width: 1150px;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    font-weight: bold;
+    unicode-bidi: isolate;
   }
   
   #newsfeed {
@@ -33,6 +46,8 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    float: right;
+    margin: 5px;
   }
   
   .friend .timeStamp .feeling {
@@ -54,6 +69,7 @@ body {
   .userProfile {
     flex: initial;
     position: relative;
+    /* float: right; */
   }
   
   li {
@@ -76,7 +92,7 @@ body {
     width: 100%;
     background-color: #89c7de;
     color: #fff;
-    text-align: center;
+    /* text-align: center; */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -85,6 +101,7 @@ body {
   .createrInfo {
     text-align: end;
     padding-right: 15px;
+    margin: 0;
   }
   
   main {
@@ -92,13 +109,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    float: right;
-    padding-left: 20%;
+    /* float: right; */
+    padding-left: 12%;
     padding-top: 80px;
   }
   
   aside {
-    width: 20%;
+    width: 12%;
     background-color: aliceblue;
     position: fixed;
     top: 80px; /* ヘッダーの高さ分下げる */
@@ -310,3 +327,32 @@ body {
     margin: 0;
     vertical-align: bottom;
   }
+  @keyframes infinity-scroll-right {
+    from {
+      transform: translateX(-100%);
+    }
+      to {
+      transform: translateX(8000%);
+    }
+  }
+  .scroll-infinity__wrap {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+  }
+  .scroll-infinity__list--right_men1 {
+    animation: infinity-scroll-right 6s infinite linear 1s both;
+  }
+  .scroll-infinity__list--right_men2 {
+    animation: infinity-scroll-right 11s infinite linear 1s both;
+  }
+  .scroll-infinity__list--right_rabbit {
+    animation: infinity-scroll-right 10s infinite linear 1s both;
+  }
+
+.scroll-infinity_item {
+    height: 30px;
+    padding: 0;
+}
